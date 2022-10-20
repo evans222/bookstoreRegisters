@@ -9,4 +9,4 @@ F8::
 MsgBox,,hot,function key was pressed
 return
 
-;this is a test comment, nothing moreeeeeeee
+;this is a test comment, nothing moree
