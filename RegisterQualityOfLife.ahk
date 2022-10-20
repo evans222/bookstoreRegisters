@@ -8,3 +8,5 @@ Loop
 	IfWinExist,Freeway Commerce Connect
 		WinMinimize,Freeway Commerce Connect
 }
+
+;this is a test comment, nothing more
