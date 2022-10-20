@@ -6,10 +6,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;Run, %A_MyDocuments%\bookstoreRegisters\loop.ahk
 Loop
 {
-	MsgBox,,Checking for window
 	IfWinExist,Freeway Commerce Connect
 		WinMinimize,Freeway Commerce Connect
-	Sleep, 5000
 }
 F8::
 MsgBox,,hot,function key was pressed
