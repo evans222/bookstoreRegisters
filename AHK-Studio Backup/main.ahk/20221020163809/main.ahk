@@ -20,21 +20,10 @@ Loop
 ^!u::
 Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
 Sleep, 5000
-MsgBox,,Update,Pull complete.`nThis script will now reload.,5
+MsgBox,,Update,Pull complete.`nThis script will now reload.
 Reload
 return
 
-;Starts card transaction
 Home::
-MouseClick,Left,1650,950
-MouseClick
-return
 
-waitColor(c, xcoord, ycoord) {
-	Loop {
-		PixelGetColor,x,%xcoord%,%ycoord%
-		If(x == c) {
-			return
-		}
-	}
-}
+return
