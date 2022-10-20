@@ -3,9 +3,10 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-MsgBox,,Madeit,Made it to the loop!
-;Loop
-;}
-;	IfWinExist,Freeway Commerce Connect
-;		WinMinimize,Freeway Commerce Connect
-;}
+Run, %A_MyDocuments%\bookstoreRegisters\loop.ahk
+
+F8::
+MsgBox,,hot,function key was pressed
+return
+
+;this is a test comment, nothing moreeeeeeee
