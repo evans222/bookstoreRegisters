@@ -3,9 +3,13 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-MsgBox,,Madeit,Made it to the loop!
-;Loop
-;}
-;	IfWinExist,Freeway Commerce Connect
-;		WinMinimize,Freeway Commerce Connect
-;}
+;BEFORE USING:
+;Install git
+;clone repository into documents
+
+
+;need to use pull command
+
+Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
+Sleep, 5000
+Run %A_MyDocuments%\bookstoreRegisters\main.ahk

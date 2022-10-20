@@ -18,14 +18,8 @@ IfMsgBox, No
 	ExitApp
 }
 
-MsgBox,,,the box was yes
-Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
-Sleep, 5000
-Run %A_MyDocuments%\bookstoreRegisters\main.ahk
-ExitApp
-
-
-
-
-
+	MsgBox,,,the box was yes
+	Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
+	Sleep, 5000
+	Run %A_MyDocuments%\bookstoreRegisters\main.ahk
 

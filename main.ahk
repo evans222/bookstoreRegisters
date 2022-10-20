@@ -20,7 +20,7 @@ Loop
 ^!u::
 Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
 Sleep, 5000
-MsgBox,,Update,This script will now reload.
+MsgBox,,Update,Pull complete.`nThis script will now reload.
 Reload
 return
 

@@ -11,21 +11,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;need to use pull command
 
 MsgBox,4,init.ahk,Yes - Update script and launch`nNo - Just update,10
-IfMsgBox, No
+IfMsgBox, Yes
 {
-	MsgBox,,,the box was no
 	Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
-	ExitApp
+	Sleep, 5000
+	Run %A_MyDocuments%\bookstoreRegisters\main.ahk
 }
 
-MsgBox,,,the box was yes
-Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
-Sleep, 5000
-Run %A_MyDocuments%\bookstoreRegisters\main.ahk
-ExitApp
-
-
-
-
-
-
+else
+	Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
