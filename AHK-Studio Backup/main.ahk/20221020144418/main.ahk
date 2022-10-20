@@ -4,26 +4,15 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;Run, %A_MyDocuments%\bookstoreRegisters\loop.ahk
-
-;Keeps freedompay minimized, exits errors
 Loop
 {
+	MsgBox,,Checking for window
 	IfWinExist,Freeway Commerce Connect
 		WinMinimize,Freeway Commerce Connect
-	IfWinExist,Not Accepted
-		Send {Escape}
-	IfWinExist,Tender Not Accepted
-		Send {Escape}
+	Sleep, 5000
 }
-
-;Updates and re-launches this script
-^!u::
-Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
-Sleep, 5000
-MsgBox,,Update,This script will now reload.
-Reload
+F8::
+MsgBox,,hot,function key was pressed
 return
 
-Home::
-
-return
+;this is a test comment, nothing moreeeeeeee

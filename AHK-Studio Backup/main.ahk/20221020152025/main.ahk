@@ -5,22 +5,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;Run, %A_MyDocuments%\bookstoreRegisters\loop.ahk
 
-;Keeps freedompay minimized, exits errors
+;Keeps freedompay minimized
 Loop
 {
 	IfWinExist,Freeway Commerce Connect
 		WinMinimize,Freeway Commerce Connect
-	IfWinExist,Not Accepted
-		Send {Escape}
-	IfWinExist,Tender Not Accepted
-		Send {Escape}
 }
 
 ;Updates and re-launches this script
 ^!u::
 Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
 Sleep, 5000
-MsgBox,,Update,This script will now reload.
 Reload
 return
 
