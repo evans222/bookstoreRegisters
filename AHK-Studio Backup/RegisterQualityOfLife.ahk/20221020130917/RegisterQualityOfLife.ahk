@@ -9,4 +9,4 @@ Loop
 		WinMinimize,Freeway Commerce Connect
 }
 
-;this is a test comment, nothing moree
+;this is a test comment, nothing more
