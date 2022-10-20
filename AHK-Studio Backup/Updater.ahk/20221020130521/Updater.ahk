@@ -2,11 +2,13 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-MsgBox,,Done,Done
-Loop
-{
-	IfWinExist,Freeway Commerce Connect
-		WinMinimize,Freeway Commerce Connect
-}
 
-;this is a test comment, nothing more
+;BEFORE USING:
+;Install git
+;clone repository into documents
+
+
+;need to use pull command
+
+Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters, Min
+Run %A_MyDocuments%/bookstoreRegisters/RegisterQualityOfLife.ahk
