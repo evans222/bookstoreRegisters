@@ -3,7 +3,7 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-Run, %A_MyDocuments%\bookstoreRegisters\loop.ahk
+Run, %A_MyDocuments%/bookstoreRegisters/Looping.ahk
 
 F8::
 MsgBox,,hot,function key was pressed

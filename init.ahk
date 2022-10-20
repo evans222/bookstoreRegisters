@@ -12,4 +12,4 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
 Sleep, 5000
-Run %A_MyDocuments%/bookstoreRegisters/RegisterQualityOfLife.ahk
+Run %A_MyDocuments%\bookstoreRegisters\main.ahk
