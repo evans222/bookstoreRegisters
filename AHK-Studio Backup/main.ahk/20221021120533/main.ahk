@@ -29,17 +29,14 @@ return
 
 ;Starts card transaction
 Home::
-MouseClick, Left, 1650, 950
-waitColor(0x1D129C, 1800, 50)
-MouseClick, Left, 1800, 50
-waitColor(0xCAC9C2, 1060, 710)
-MouseClick, Left, 1060, 710
+MouseClick,Left,1650,950
+MouseClick
 return
 
-waitColor(color, xcoord, ycoord) {
+waitColor(c, xcoord, ycoord) {
 	Loop {
 		PixelGetColor,x,%xcoord%,%ycoord%
-		If(x == color) {
+		If(x == c) {
 			return
 		}
 	}

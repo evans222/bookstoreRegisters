@@ -2,9 +2,6 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-;STUFF TO ADD:
-;Check resolution of display and compensate if necessary
-
 
 ;Run, %A_MyDocuments%\bookstoreRegisters\loop.ahk
 
@@ -29,17 +26,14 @@ return
 
 ;Starts card transaction
 Home::
-MouseClick, Left, 1650, 950
-waitColor(0x1D129C, 1800, 50)
-MouseClick, Left, 1800, 50
-waitColor(0xCAC9C2, 1060, 710)
-MouseClick, Left, 1060, 710
+MouseClick,Left,1650,950
+MouseClick
 return
 
-waitColor(color, xcoord, ycoord) {
+waitColor(c, xcoord, ycoord) {
 	Loop {
 		PixelGetColor,x,%xcoord%,%ycoord%
-		If(x == color) {
+		If(x == c) {
 			return
 		}
 	}
