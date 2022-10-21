@@ -20,13 +20,13 @@ Loop
 }
 
 ;Testing Mode
-;^!t::
+^!t::
 
-;return
+return
 
-;^!r::Reload
+^!r::Reload
 
-Updates and re-launches this script
+;Updates and re-launches this script
 ^!u::
 Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
 Sleep, 5000
@@ -35,19 +35,19 @@ Reload
 return
 
 ;Starts card transaction
-;Home::
-;MouseClick, Left, 1650, 950
-;waitColor(0x1D129C, 1800, 50)
-;MouseClick, Left, 1800, 50
-;waitColor(0xCAC9C2, 1060, 710)
-;MouseClick, Left, 1060, 710
-;return
+Home::
+MouseClick, Left, 1650, 950
+waitColor(0x1D129C, 1800, 50)
+MouseClick, Left, 1800, 50
+waitColor(0xCAC9C2, 1060, 710)
+MouseClick, Left, 1060, 710
+return
 
-;waitColor(color, xcoord, ycoord) {
-;	Loop {
-;		PixelGetColor,x,%xcoord%,%ycoord%
-;		If(x == color) {
-;			return
-;		}
-;	}
-;}
+waitColor(color, xcoord, ycoord) {
+	Loop {
+		PixelGetColor,x,%xcoord%,%ycoord%
+		If(x == color) {
+			return
+		}
+	}
+}

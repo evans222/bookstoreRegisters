@@ -26,13 +26,13 @@ Loop
 
 ;^!r::Reload
 
-Updates and re-launches this script
-^!u::
-Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
-Sleep, 5000
-MsgBox,,Update,Pull complete.`nThis script will now reload.,5
-Reload
-return
+;Updates and re-launches this script
+;^!u::
+;Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
+;Sleep, 5000
+;MsgBox,,Update,Pull complete.`nThis script will now reload.,5
+;Reload
+;return
 
 ;Starts card transaction
 ;Home::
