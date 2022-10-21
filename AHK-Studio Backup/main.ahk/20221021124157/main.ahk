@@ -19,13 +19,6 @@ Loop
 		Send {Escape}
 }
 
-;Testing Mode
-^!t::
-
-return
-
-^!r::Reload
-
 ;Updates and re-launches this script
 ^!u::
 Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
