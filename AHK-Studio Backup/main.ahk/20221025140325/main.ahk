@@ -45,10 +45,11 @@ waitColor("0xCAC9C2", 1060, 710)
 MouseClick, Left, 1060, 710 ;enter
 return
 
-waitColor(c, xcoord, ycoord) {
+waitColor(color, xcoord, ycoord) {
 	Loop {
+		MsgBox,,,%color%
 		PixelGetColor,x,%xcoord%,%ycoord%
-		If(x == c) {
+		If(x == %color%) {
 			MsgBox,,,found the color
 			return
 		}

@@ -47,6 +47,7 @@ return
 
 waitColor(c, xcoord, ycoord) {
 	Loop {
+		MsgBox,,,%c%
 		PixelGetColor,x,%xcoord%,%ycoord%
 		If(x == c) {
 			MsgBox,,,found the color
