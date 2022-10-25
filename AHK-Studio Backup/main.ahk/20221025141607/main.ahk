@@ -39,7 +39,6 @@ return
 ;Starts card transaction
 Home::
 MouseClick, Left, 1650, 950 ;green payment
-Sleep, 500
 waitColor("0x1C119C", 1800, 50)
 MouseClick, Left, 1800, 50 ;credit card
 waitColor("0xCAC9C2", 1060, 710)
