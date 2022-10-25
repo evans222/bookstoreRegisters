@@ -21,9 +21,7 @@ Loop
 
 ;Testing Mode
 ^!t::
-MouseGetPos, xpos, ypos
-PixelGetColor,c,%xpos%,%ypos%
-MsgBox,,Result,%c%
+
 return
 
 ^!r::Reload
