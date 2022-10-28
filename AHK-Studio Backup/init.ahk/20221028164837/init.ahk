@@ -18,9 +18,9 @@ IfMsgBox, No
 }
 
 Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
-Sleep, 3000
+Sleep, 5000
 Run %A_MyDocuments%\bookstoreRegisters\main.ahk
-Run %A_MyDocuments%\bookstoreRegisters\main.py
+Run
 ExitApp
 
 

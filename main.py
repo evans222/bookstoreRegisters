@@ -9,16 +9,23 @@ def get_pixel_colour(i_x, i_y):
 	win32gui.ReleaseDC(i_desktop_window_id,i_desktop_window_dc)
 	return (i_colour & 0xff), ((i_colour >> 8) & 0xff), ((i_colour >> 16) & 0xff)
     
+def select_credit_card(timeout):
+    stopTime = time.time() + timeout
+    while time.time() < stopTime: #start of the actual card selection
+        a = 1
+    print("done with the while loop")
     
-print("press Ctrl+C to quit")
 try:
     while True:
+        if (keyboard.is_pressed('home')):
+            select_credit_card(5)
+        """
         x, y = pyautogui.position()
         a, b, c = get_pixel_colour(x, y)
         positionStr = 'X: ' + str(x).rjust(4) + ' Y: ' + str(y).rjust(4) + ' color: ' + str(a).rjust(3) + ', ' + str(b).rjust(3) + ', ' + str(c).rjust(3)
         print(positionStr, end='')
         print('\b' * len(positionStr), end='', flush=True)
-
+        """
 except KeyboardInterrupt: 
     print("Done")
     
