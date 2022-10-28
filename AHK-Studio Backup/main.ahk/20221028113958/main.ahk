@@ -21,7 +21,7 @@ Loop
 
 ;Testing Mode
 ^!t::
-Run, cmd.exe "python mousePos.py",%A_MyDocuments%/bookstoreRegisters
+Run %A_MyDocuments%/bookstoreRegisters/mousePos.py
 return
 
 ^!r::Reload
