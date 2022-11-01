@@ -10,7 +10,7 @@ def get_pixel_colour(i_x, i_y):
 	return (i_colour & 0xff), ((i_colour >> 8) & 0xff), ((i_colour >> 16) & 0xff)
 
 print("press Ctrl+C to quit")
-colorText = ""
+colorText = "-"
 avgNoRed = 200
 avgNoGreen = 200
 avgNoBlue = 200
@@ -34,7 +34,7 @@ try:
         positionStr = 'X: ' + str(x).rjust(4) + ' Y: ' + str(y).rjust(4) + ' color: ' + str(a).rjust(3) + ', ' + str(b).rjust(3) + ', ' + str(c).rjust(3) + ' ' + colorText
         print(positionStr, end='')
         print('\b' * len(positionStr), end='', flush=True)
-        colorText = ""
+        colorText = "-"
 
 except KeyboardInterrupt:
     print()
