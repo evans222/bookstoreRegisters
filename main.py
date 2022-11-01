@@ -1,5 +1,6 @@
 import win32gui
 import pyautogui
+import keyboard
 
 def get_pixel_colour(i_x, i_y):
 	i_desktop_window_id = win32gui.GetDesktopWindow()

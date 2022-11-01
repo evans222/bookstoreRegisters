@@ -24,7 +24,7 @@ Loop
 ^!t::
 Run, cmd.exe, %A_MyDocuments%/bookstoreRegisters
 Sleep, 1000
-Send python testColorCnd.py{Enter}
+Send python colorTest.py{Enter}
 return
 
 ^!r::Reload
