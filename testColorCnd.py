@@ -18,7 +18,7 @@ avgNoBlue = 200
 try:
     while True:
         x, y = pyautogui.position()
-        a, b, c = get_pixel_colour(x, y)
+        a, b, c = get_pixel_colour(1888, 165)
         #avgNoGreen = (a + c) / 2
         #avgNoBlue = (a + b) / 2
         #avgNoRed = (b + c) / 2
