@@ -24,14 +24,14 @@ try:
         avgNoRed = (b + c) / 2
 
         if (abs(a - c) < 150) and (b > (avgNoGreen + 35)) and (a < b) and (c < b):
-            colorText += "green"
+            colorText = "G"
         if (abs(a - b) < 150) and (c > (avgNoBlue + 35)) and (a < c) and (b < c):
-            colorText += "blue"
+            colorText = "B"
         if (abs(b - c) < 150) and (a > (avgNoRed + 35)) and (c < a) and (b < a):
-            colorText += "red"
+            colorText = "R"
 
-            #there should be no overlap between colors, i.e. "bluered" should not show up
-        positionStr = colorText + ' X: ' + str(x).rjust(4) + ' Y: ' + str(y).rjust(4) + ' color: ' + str(a).rjust(3) + ', ' + str(b).rjust(3) + ', ' + str(c).rjust(3)
+            #there should be no overlap between colors
+        positionStr = 'X: ' + str(x).rjust(4) + ' Y: ' + str(y).rjust(4) + ' color: ' + str(a).rjust(3) + ', ' + str(b).rjust(3) + ', ' + str(c).rjust(3) + ' ' + colorText
         print(positionStr, end='')
         print('\b' * len(positionStr), end='', flush=True)
         colorText = ""
