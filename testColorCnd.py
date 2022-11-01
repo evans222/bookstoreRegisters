@@ -19,15 +19,17 @@ try:
     while True:
         x, y = pyautogui.position()
         a, b, c = get_pixel_colour(x, y)
-        avgNoGreen = (a + c) / 2
-        avgNoBlue = (a + b) / 2
-        avgNoRed = (b + c) / 2
-
-        if (abs(a - c) < 150) and (b > (avgNoGreen + 35)) and (a < b) and (c < b):
+        #avgNoGreen = (a + c) / 2
+        #avgNoBlue = (a + b) / 2
+        #avgNoRed = (b + c) / 2
+        #and (b > (avgNoGreen + 35))
+        #and (c > (avgNoBlue + 35))
+        #and (a > (avgNoRed + 35))
+        if (abs(a - c) < 150) and (a < b) and (c < b):
             colorText = "G"
-        if (abs(a - b) < 150) and (c > (avgNoBlue + 35)) and (a < c) and (b < c):
+        if (abs(a - b) < 150) and (a < c) and (b < c):
             colorText = "B"
-        if (abs(b - c) < 150) and (a > (avgNoRed + 35)) and (c < a) and (b < a):
+        if (abs(b - c) < 150) and (c < a) and (b < a):
             colorText = "R"
 
             #there should be no overlap between colors
