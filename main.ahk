@@ -21,11 +21,11 @@ Loop
 
 ;Testing Mode
 ;could be made more efficient if I find out how to use /c
-^!t::
-Run, cmd.exe, %A_MyDocuments%/bookstoreRegisters
-Sleep, 1000
-Send python testColorCnd.py{Enter}
-return
+;^!t::
+;Run, cmd.exe, %A_MyDocuments%/bookstoreRegisters
+;Sleep, 1000
+;Send python testColorCnd.py{Enter}
+;return
 
 ^!r::Reload
 
