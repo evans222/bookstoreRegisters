@@ -19,8 +19,9 @@ IfMsgBox, No
 
 Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
 Sleep, 3000
+;Running python command commented out for game day
 Run %A_MyDocuments%\bookstoreRegisters\main.ahk
-Run %A_MyDocuments%\bookstoreRegisters\main.py
+;Run %A_MyDocuments%\bookstoreRegisters\main.py
 ExitApp
 
 
