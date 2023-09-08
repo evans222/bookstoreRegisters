@@ -6,6 +6,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;Check resolution of display and compensate if necessary
 
 
+if not DirExist("C:\Program Files\AutoHotkey\v2") {
+	RunWait, "powershell curl https://www.autohotkey.com/download/ahk-v2.exe -O ahk2.exe"
+	RunWait, "ahk2.exe /quiet"
+	RunWait, "del ahk2.exe"
+}
+
+if DirExist("C:\Program Files\AutoHotkey\v2") {
+	Run %A_MyDocuments%\bookstoreRegisters\hotkeyListener.ahk
+}
+
 ;Run, %A_MyDocuments%\bookstoreRegisters\loop.ahk
 
 ;Keeps freedompay minimized, exits errors
