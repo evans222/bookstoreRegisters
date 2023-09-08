@@ -37,18 +37,18 @@ Loop
 ;Send python testColorCnd.py{Enter}
 ;return
 
-^!r::Reload
+;^!r::Reload
 
 ;Updates and re-launches everything
 ;NEED to add: adapability for quitting future versions of python, perhaps fetch name somehow and then quit
-^!u:: 
-Run, cmd.exe /c "TASKKILL /FI `"IMAGENAME eq python3.10.exe`" /F" ;stops python
-Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
-Sleep, 3000
-MsgBox,,Update,Pull complete.`nThis script will now reload.,5 ;timeout of 5 sec
-Reload
+;^!u:: 
+;Run, cmd.exe /c "TASKKILL /FI `"IMAGENAME eq python3.10.exe`" /F" ;stops python
+;Run, cmd.exe /c "git pull https://github.com/evans222/bookstoreRegisters.git",%A_MyDocuments%/bookstoreRegisters
+;Sleep, 3000
+;MsgBox,,Update,Pull complete.`nThis script will now reload.,5 ;timeout of 5 sec
+;Reload
 
-return
+;return
 
 ;Starts card transaction
 ;Home::
