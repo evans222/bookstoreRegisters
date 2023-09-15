@@ -1,6 +1,6 @@
 ﻿#Requires AutoHotkey v2.0
 
-F12::
+^F12::
 {
     ProcessClose "NetSuite.Retail.POS.PointOfSale.exe"
     MsgBox "Starting NSPOS","Please wait...","T5"
