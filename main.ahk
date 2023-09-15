@@ -1,5 +1,12 @@
 ﻿#Requires AutoHotkey v2.0
 
+^F11::
+{
+    RunWait A_ComSpec ' /c git pull https://github.com/evans222/bookstoreRegisters.git'
+    Sleep 10000
+    Reload
+}
+
 ^F12::
 {
     ProcessClose "NetSuite.Retail.POS.PointOfSale.exe"
