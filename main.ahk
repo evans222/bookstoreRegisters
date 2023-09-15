@@ -3,7 +3,7 @@
 F12::
 {
     ProcessClose "NetSuite.Retail.POS.PointOfSale.exe"
-    MsgBox "Please wait...","Please wait...","T3"
+    MsgBox "Starting NSPOS","Please wait...","T5"
     Sleep 1000
     Run "C:\ProgramData\Microsoft\Windows\Start Menu\NetSuite Point of Sale.lnk"
 }
