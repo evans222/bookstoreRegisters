@@ -8,4 +8,4 @@ if(usrJunk = "Timeout" || usrJunk = "Yes") {
 }
 
 Sleep 3000
-Run "%A_MyDocuments%\bookstoreRegisters\main.ahk"
+Run A_MyDocuments "\bookstoreRegisters\main.ahk"
