@@ -9,16 +9,18 @@ SetWorkingDir A_ScriptDir
 
 ^F2::
 {
+    RunAs "Administrator"
     Run "restart_nspos_services.bat"
 }
 
 ^F3::
 {
+    RunAs "Administrator"
     Run "restart_freedompay_services.bat"
 }
 ^F11::
 {
-    RunWait A_ComSpec ' /c git pull https://github.com/evans222/bookstoreRegisters.git'
+    RunWait A_ComSpec ' /c git pull https://github.com/evans222/bookstoreRegisters.git --force'
     Sleep 10000
     Reload
 }

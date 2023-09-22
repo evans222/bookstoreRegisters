@@ -6,9 +6,9 @@
 
 usrJunk := MsgBox("Yes - Update script and launch`nNo - Just update","init.ahk","YesNo T5")
 if(usrJunk = "Timeout" || usrJunk = "Yes") {
-    RunWait A_ComSpec ' /c git pull https://github.com/evans222/bookstoreRegisters.git'
+    RunWait A_ComSpec ' /c git pull https://github.com/evans222/bookstoreRegisters.git --force'
 } else {
-    RunWait A_ComSpec ' /c git pull https://github.com/evans222/bookstoreRegisters.git'
+    RunWait A_ComSpec ' /c git pull https://github.com/evans222/bookstoreRegisters.git --force'
 }
 
 Sleep 3000
