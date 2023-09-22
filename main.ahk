@@ -1,5 +1,19 @@
 ﻿#Requires AutoHotkey v2.0
 
+^F1::
+{
+    MsgBox "Combine CTRL with all FN keys:`n`nF1 - Help menu`nF2 - Restart NSPOS services`nF3 - Restart FreedomPay services`nF11 - Update from GitHub`nF12 - Restart NSPOS","List of Hotkeys"
+}
+
+^F2::
+{
+    Run "%A_MyDocuments%\bookstoreRegisters\restart_nspos_services.bat"
+}
+
+^F3::
+{
+    Run "%A_MyDocuments%\bookstoreRegisters\restart_freedompay_services.bat"
+}
 ^F11::
 {
     RunWait A_ComSpec ' /c git pull https://github.com/evans222/bookstoreRegisters.git'
