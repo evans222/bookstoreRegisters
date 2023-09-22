@@ -9,14 +9,13 @@ SetWorkingDir A_ScriptDir
 
 ^F2::
 {
-    RunAs "Administrator", ""
-    Run "restart_nspos_services.bat"
+    RunWait A_ComSpec ' /c powershell -Command "Start-Process restart_nspos_services.bat -Verb RunAs"'
+    ;Run "restart_nspos_services.bat"
 }
 
 ^F3::
 {
-    RunAs "Administrator", ""
-    Run "restart_freedompay_services.bat"
+    ;Run "restart_freedompay_services.bat"
 }
 ^F11::
 {
