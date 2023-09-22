@@ -9,13 +9,13 @@ SetWorkingDir A_ScriptDir
 
 ^F2::
 {
-    RunAs "Administrator"
+    RunAs "Administrator", ""
     Run "restart_nspos_services.bat"
 }
 
 ^F3::
 {
-    RunAs "Administrator"
+    RunAs "Administrator", ""
     Run "restart_freedompay_services.bat"
 }
 ^F11::
