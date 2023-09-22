@@ -9,18 +9,18 @@ SetWorkingDir A_ScriptDir
 
 ^F2::
 {
-    RunWait A_ComSpec ' /c powershell -Command "Start-Process restart_nspos_services.bat -Verb RunAs"'
-    ;Run "restart_nspos_services.bat"
+    Run A_ComSpec ' /c powershell -Command "Start-Process restart_nspos_services.bat -Verb RunAs"'
 }
 
 ^F3::
 {
-    ;Run "restart_freedompay_services.bat"
+    Run A_ComSpec ' /c powershell -Command "Start-Process restart_freedompay_services.bat -Verb RunAs"'
 }
+
 ^F11::
 {
     RunWait A_ComSpec ' /c git pull https://github.com/evans222/bookstoreRegisters.git --force'
-    Sleep 10000
+    Sleep 1000
     Reload
 }
 
