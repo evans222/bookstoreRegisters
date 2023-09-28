@@ -4,7 +4,7 @@ SetWorkingDir A_ScriptDir
 
 ^F1::
 {
-    MsgBox "Combine CTRL with all FN keys:`n`nF1 - Help menu`nF2 - Restart NSPOS services`nF3 - Restart FreedomPay services`nF11 - Update from GitHub`nF12 - Restart NSPOS","List of Hotkeys"
+    MsgBox "Combine CTRL with all FN keys:`n`nF1 - Help menu`nF2 - Restart NSPOS services`nF3 - Restart FreedomPay services`nF4 - Shutdown NSPOS`nF11 - Update from GitHub`nF12 - Restart NSPOS","List of Hotkeys"
 }
 
 ^F2::
@@ -17,6 +17,11 @@ SetWorkingDir A_ScriptDir
     Run A_ComSpec ' /c powershell -Command "Start-Process restart_freedompay_services.bat -Verb RunAs"'
 }
 
+^F4::
+{
+    ProcessClose "NetSuite.Retail.POS.PointOfSale.exe"
+}
+
 ^F11::
 {
     RunWait A_ComSpec ' /c git pull https://github.com/evans222/bookstoreRegisters.git --force'
@@ -27,9 +32,9 @@ SetWorkingDir A_ScriptDir
 ^F12::
 {
     ProcessClose "NetSuite.Retail.POS.PointOfSale.exe"
-    MsgBox "Starting NSPOS","Please wait...","T5"
     Sleep 1000
     Run "C:\ProgramData\Microsoft\Windows\Start Menu\NetSuite Point of Sale.lnk"
+    MsgBox "Starting NSPOS","Please wait...","T5"
 }
 
 Sleep 5000
