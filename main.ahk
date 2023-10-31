@@ -57,7 +57,7 @@ Loop
     if (actvWindow != 0) {
         BlockInput 1
         Sleep 500
-        Send "eschoening{Tab}Eight88%{Enter}"
+        Send "eschoening{Tab}Eight88^{Enter}"
         Sleep 1000
         BlockInput 0
         Sleep 5000
