@@ -43,7 +43,7 @@ Loop
 {
     freeWindow := WinActive("Freeway Commerce Connect")
     acctWindow := WinExist("Not Accepted")
-    actvWindow := WinActive("Permission Required","has an active session")
+    ;actvWindow := WinActive("Permission Required","has an active session")
     ;timeWindow := WinActive("Permission Required","Your session has timed out") possibility later, but might violate policies
 
     if (freeWindow != 0) {
@@ -54,13 +54,13 @@ Loop
         Send "{Escape}"
     }
 
-    if (actvWindow != 0) {
-        BlockInput 1
-        Sleep 500
-        Send "eschoening{Tab}Eight88^{Enter}"
-        Sleep 1000
-        BlockInput 0
-        Sleep 5000
-    }
+;if (actvWindow != 0) {
+    ;    BlockInput 1
+    ;    Sleep 500
+    ;    Send "eschoening{Tab}Eight88^{Enter}"
+    ;    Sleep 1000
+    ;    BlockInput 0
+    ;    Sleep 5000
+    ;}
 
 }
